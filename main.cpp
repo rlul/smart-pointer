@@ -1,4 +1,5 @@
-#include "smart_pointer.h"
+#include "smartptr/sharedptr.h"
+#include "smartptr/weakptr.h"
 #include "testing.h"
 #include <cstdio>
 
@@ -8,8 +9,7 @@ struct TestStruct_t
 	int b;
 };
 
-template <>
-__forceinline void print_value(CSharedPtr<TestStruct_t>& ptr)
+template<>__forceinline void print_value(CSharedPtr<TestStruct_t>& ptr)
 {
 	printf("[%p]: a = %d, b = %d\n", &ptr, ptr->a, (*ptr).b);
 }

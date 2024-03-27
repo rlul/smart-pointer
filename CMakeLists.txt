@@ -5,4 +5,4 @@ project(smart-pointer)
 set(CMAKE_CXX_STANDARD 20)
 set(CXX_STANDARD 20)
 
-add_executable(smart-pointer main.cpp "smart_pointer.h" "testing.h")
+add_executable(smart-pointer main.cpp  "testing.h" "smartptr/weakptr.h" "smartptr/sharedptr.h" "smartptr/controlblock.h")
